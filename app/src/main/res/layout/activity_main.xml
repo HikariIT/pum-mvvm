@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.mvvmpresentation.viewmodels.ExpenseViewModel" />
+            type="com.example.expenseapplication.viewmodels.ExpenseViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

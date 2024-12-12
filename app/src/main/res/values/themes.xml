@@ -1,16 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.MVVMPresentation" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.ExpenseApplication" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorAccent">@color/main_bg</item>
     </style>
 
-    <style name="Theme.MVVMPresentation" parent="Base.Theme.MVVMPresentation">
+    <style name="Theme.ExpenseApplication" parent="Base.Theme.ExpenseApplication">
         <item name="android:statusBarColor">@color/main_status_bar</item>
     </style>
 
-    <style name="AppTheme.PopupOverlay" parent="Base.Theme.MVVMPresentation">
+    <style name="AppTheme.PopupOverlay" parent="Base.Theme.ExpenseApplication">
         <item name="android:padding">8dp</item>
     </style>
 </resources>

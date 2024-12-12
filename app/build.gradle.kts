@@ -34,6 +34,19 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    viewBinding {
+        enable = true
+    }
+
+    dataBinding {
+        enable = true
+    }
+
+    buildToolsVersion = "35.0.0"
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
