@@ -1,0 +1,74 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.mvvmpresentation.viewmodels.ExpenseViewModel" />
+    </data>
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/rounded_layout"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/main_bg_alt2">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignItems="center"
+            app:justifyContent="space_between">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvExpenseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expense_name"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvExpenseCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvExpenseAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/amount"
+                    android:textSize="14sp"
+                    android:textColor="@color/main_text_alt" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnRemoveExpense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="0dp"
+                    android:backgroundTint="@color/main_bg"
+                    android:insetBottom="0dp"
+                    android:minWidth="3dp"
+                    android:text="@string/symbol_minus"
+                    android:textColor="@color/main_text"
+                    app:iconPadding="0dp"
+                    app:iconSize="0dp" />
+
+            </LinearLayout>
+        </com.google.android.flexbox.FlexboxLayout>
+    </LinearLayout>
+</layout>

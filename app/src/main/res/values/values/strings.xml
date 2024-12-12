@@ -16,4 +16,5 @@
     <string name="add_expense">Add expense</string>
     <string name="symbol_minus">-</string>
     <string name="placeholder_one">1</string>
+    <string name="split_between">Split between:</string>
 </resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MVVMPresentation</string>
+    <string name="expense_name">Nazwa Wydatku</string>
+    <string name="category">Kategoria</string>
+    <string name="amount">Wartość</string>
+    <string name="name">LISTA WYDATKÓW</string>
+    <string name="clear_all_expenses">Usuń Wydatki</string>
+    <string name="total">Razem</string>
+    <string name="currency">" zł"</string>
+    <string name="alert_remove_title">Usuń wszystkie wydatki</string>
+    <string name="alert_remove_text">Czy na pewno chcesz usunąć wszystkie wprowadzone wydatki?</string>
+    <string name="global_yes">Tak</string>
+    <string name="global_no">Nie</string>
+    <string name="form_save">Zapisz</string>
+    <string name="form_amount">Ilość</string>
+    <string name="add_expense">Dodaj wydatek</string>
+    <string name="symbol_minus">-</string>
+    <string name="placeholder_one">1</string>
+</resources>
