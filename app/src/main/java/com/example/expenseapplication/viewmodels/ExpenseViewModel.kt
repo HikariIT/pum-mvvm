@@ -1,6 +1,5 @@
 package com.example.expenseapplication.viewmodels
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
@@ -12,12 +11,7 @@ import kotlinx.coroutines.launch
 
 class ExpenseViewModel(private val model: ExpenseModel): ViewModel() {
     val allExpenses: LiveData<List<Expense>> = model.allExpenses
-
-    val totalExpenses: MediatorLiveData<Double> = MediatorLiveData<Double>().apply {
-        addSource(allExpenses) { expenses ->
-            value = expenses.sumOf { it.amount }
-        }
-    }
+    val totalExpenses: LiveData<Double> = model.totalExpenses
 
     val expenseName = MutableLiveData<String>()
     val expenseAmount = MutableLiveData<String>()
@@ -29,8 +23,6 @@ class ExpenseViewModel(private val model: ExpenseModel): ViewModel() {
         val name = expenseName.value.orEmpty()
         val amount = expenseAmount.value?.toDoubleOrNull() ?: 0.0
         val category = categories.getOrNull(selectedCategoryIndex.value ?: 0).orEmpty()
-        Log.w("ExpenseViewModel", "Inserting expense: $name, $amount, $category")
-        Log.w("ExpenseViewModel", "All expenses: ${allExpenses.value}")
 
         if (name.isNotEmpty() && amount > 0) {
             val expense = Expense(name = name, amount = amount, category = category)

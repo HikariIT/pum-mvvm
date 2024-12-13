@@ -24,13 +24,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Inflate layout using data binding
         binding = ActivityMainBinding.inflate(layoutInflater)
         binding.lifecycleOwner = this
         binding.viewModel = expenseViewModel
         setContentView(binding.root)
 
-        // Initialize RecyclerView and Adapter
         val adapter = ExpenseAdapter(emptyList(), expenseViewModel)
         binding.recyclerViewExpenses.layoutManager = LinearLayoutManager(this)
         binding.recyclerViewExpenses.adapter = adapter
