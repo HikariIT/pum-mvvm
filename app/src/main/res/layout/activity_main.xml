@@ -57,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:text="@{@string/total.concat(`: `).concat(String.valueOf(viewModel.getTotalExpenses())).concat(@string/currency)}"
+                    android:text="@{@string/total.concat(`: `).concat(`Placeholder`)}"
                     android:textAlignment="center"
                     android:textColor="@color/main_text"
                     android:textSize="16sp" />

@@ -6,7 +6,6 @@ import com.example.expenseapplication.data.entities.Expense
 
 class ExpenseModel(private val expenseDao: ExpenseDao) {
     val allExpenses: LiveData<List<Expense>> = expenseDao.getAllExpenses()
-    val totalExpenses: LiveData<Double> = expenseDao.getTotalExpenses()
 
     suspend fun insertExpense(expense: Expense) {
         expenseDao.insertExpense(expense)

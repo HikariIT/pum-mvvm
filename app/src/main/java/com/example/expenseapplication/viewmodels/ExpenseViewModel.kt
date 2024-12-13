@@ -11,17 +11,14 @@ import kotlinx.coroutines.launch
 
 class ExpenseViewModel(private val model: ExpenseModel): ViewModel() {
     val allExpenses: LiveData<List<Expense>> = model.allExpenses
-    val totalExpenses: LiveData<Double> = model.totalExpenses
 
-    val expenseName = MutableLiveData<String>()
-    val expenseAmount = MutableLiveData<String>()
     val selectedCategoryIndex = MutableLiveData<Int>(0)
 
     private val categories = listOf("Food", "Transport", "Entertainment", "Other")
 
     fun insertExpense() {
-        val name = expenseName.value.orEmpty()
-        val amount = expenseAmount.value?.toDoubleOrNull() ?: 0.0
+        val name = "NAME PLACEHOLDER"
+        val amount = 123.00
         val category = categories.getOrNull(selectedCategoryIndex.value ?: 0).orEmpty()
 
         if (name.isNotEmpty() && amount > 0) {
@@ -57,8 +54,6 @@ class ExpenseViewModel(private val model: ExpenseModel): ViewModel() {
     }
 
     fun clearForm() {
-        expenseName.value = ""
-        expenseAmount.value = ""
         selectedCategoryIndex.value = 0
     }
 }
